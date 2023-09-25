@@ -25,9 +25,9 @@ public class Philosopher
         while (running) {
             try {
                 think();
-                myLeftStick.take();
+                myLeftStick.tryTake();
                 // think(); // Pour augmenter la probabilité d'interblocage
-                myRightStick.take();
+                myRightStick.tryTake();
                 // success : process
                 eat();
                 // release resources
